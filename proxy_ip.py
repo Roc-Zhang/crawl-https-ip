@@ -36,9 +36,9 @@ def get_ip(n=1):
     global ips
     i=1
     while(i<=n):
-        url2=url+str(i)
+        url3=url+str(i)
         try:
-            response=requests.get(url2,headers=headers,timeout=3)
+            response=requests.get(url3,headers=headers,timeout=3)
             #print(response.status_code)
             html=etree.HTML(response.text,etree.HTMLParser())
             ip=html.xpath('//tbody//td[1]/text()')
