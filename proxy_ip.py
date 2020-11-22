@@ -38,7 +38,7 @@ def get_ip(n=1):
     while(i<=n):
         url3=url+str(i)
         try:
-            response=requests.get(url3,headers=headers,timeout=3)
+            response=requests.get(url3,headers=headers,timeout=10)
             #print(response.status_code)
             html=etree.HTML(response.text,etree.HTMLParser())
             ip=html.xpath('//tbody//td[1]/text()')
