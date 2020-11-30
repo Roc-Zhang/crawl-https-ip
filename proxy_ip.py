@@ -6,7 +6,7 @@ ips=[]
 auth_ip=[]
 url=r"http://www.xiladaili.com/https/"
 url2=r"https://www.baidu.com"
-headers={"User-Agent":UserAgent().Chrome}
+headers={"User-Agent":UserAgent(use_cache_server=False).random}
 
 def verify_ip(f):
     def inner(arg):
